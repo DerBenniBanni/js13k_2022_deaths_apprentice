@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Deaths Apprentice Level Editor</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body>
+    <div class="rowFlex">
+        <div class="flex">
+            <canvas id="canvas" width="800" height="600"></canvas>
+        </div>
+        <div class="flex colFlex">
+            <fieldset class="flex colFlex">
+                <legend>Clicktype</legend>
+                <button class="clickType selected" id="add" value="1">add</button>
+                <button class="clickType" id="edit" value="2">edit</button>
+                <button class="clickType" id="delete" value="3">delete</button>
+            </fieldset>
+            <fieldset class="flex colFlex">
+                <legend>Types</legend>
+                <button class="objectType selected" value="floor">Floor<br>
+                <!--button class="objectType" value="wall">Wall<br-->
+                <button class="objectType" value="door">Door<br>
+                <button class="objectType" value="key">Key<br>
+                <button class="objectType" value="jumppad">Jumppad<br>
+                <button class="objectType" value="spikes">Spikes<br>
+                <button class="objectType" value="hourglass">Hourglass<br>
+                <button class="objectType" value="player">Player<br>
+                <button class="objectType" value="text">Text<br>
+            </fieldset>
+            <fieldset class="flex colFlex editfields">
+                <legend>Editor</legend>
+                <div>
+                    <span>Time</span>
+                    <input type="number" class="editfield" field="time" value="0">
+                </div>
+                <div>
+                    <span>Textsize</span>
+                    <input type="text" class="editfield" field="textsize" value="12">
+                </div>
+                <div>
+                    <span>Jumpforce</span>
+                    <input type="text" class="editfield" field="jumpforce" value="1.7">
+                </div>
+                <div>
+                    <span>Door/Key</span>
+                    <input type="text" class="editfield" field="lock" value="allLocks">
+                </div>
+                <div>
+                    <span>Text</span>
+                    <input type="text" class="editfield smalltext" field="text" value="">
+                </div>
+                <div>
+                    <span>Spikes upwards</span>
+                    <input type="checkbox" class="editfield" field="directionUp">
+                </div>
+                <br>
+                <button class="editStore">store Data<br>
+            </fieldset>
+        </div>
+        <div class="flex colFlex">
+            <fieldset id="levels" class="flex colFlex">
+                <legend>Levels</legend>
+            </fieldset>
+            <div style="display:none;" id="levelButtonTemplateContainer"><button class="levelbutton" value="1">1</button></div>
+            <button class="flex" id="saveLevel">save Level</button>
+            <button class="flex" id="addLevel">add Level</button>
+            <button class="flex" id="delLevel">del Level</button>
+            <br>
+            <button class="flex" id="loadData">load Data</button>
+            <button class="flex" id="saveData">save Data</button>
+        </div>
+    </div>
+    <div id="importexport" class="hidden">
+        <textarea id="data" spellcheck="false"></textarea><br>
+        <button id="loadDataFromText">load</button>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <button id="closePopup">cancel</button>
+    </div>
+    
+    <script src="editor.js" type="module"></script>
+</body>
+</html>

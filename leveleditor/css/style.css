@@ -1,0 +1,73 @@
+.rowFlex {
+    display: flex;
+    flex-direction: row;
+}
+
+.colFlex {
+    display: flex;
+    flex-direction: column;
+}
+
+.levelbutton {
+    padding:1px;
+    margin:1px;
+    font-size: 10px;
+    border-width:1px;
+}
+
+.flex {
+    flex: 0 0 auto;
+}
+button {
+    box-shadow: 2px 2px 2px #00000066;
+    margin-bottom: 3px;
+}
+button.selected {
+    box-shadow: inset 0px 0px 0px #00000066;
+    background-color: beige;
+    color: darkgreen;
+    outline: none;
+}
+
+#importexport {
+    position:absolute;
+    top:20px;
+    left:20px;
+    width:80vw;
+    height: calc(90vh - 2em);
+    background-color:#a39797cc;
+    border:1px solid black;
+    padding:1em;
+}
+.hidden {
+    display: none;
+}
+
+#data {
+    margin:0;
+    padding:0.1em;
+    width:94%;
+    height:90%;
+    font-size:11px;
+    font-family: 'Courier New', Courier, monospace;
+    line-height: 90%;
+}
+#loadDataFromText {
+    color:green;
+    font-weight: bold;
+    width: 50vw;
+}
+#closePopup {
+    color:red;
+}
+
+.editfields span {
+    width:77px;
+    display: inline-block;
+}
+
+.editfields .smalltext {
+    font-size:10px;
+    width:95%;
+    color:#aa5500;
+}
